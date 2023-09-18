@@ -1,5 +1,5 @@
 name: Super-Linter
-run-name: ${{ github.actor }} this GitHub Actions checks the syntax of pyhton codes 
+run-name: ${{ github.actor }} this GitHub Actions checks the syntax of pyhton codes
 on: push
 
 jobs:
