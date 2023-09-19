@@ -1,0 +1,21 @@
+name: Automatisation de tâches
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - test
+  pull_request:
+
+jobs:
+  run_py_file:
+    runs-on: ubuntu-latest
+    steps:
+    # Install and setup a Python environment
+    - id: Python
+      name: Python Setup & Packages Installation
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+        run: pip install -r requirements.txt
